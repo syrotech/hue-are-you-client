@@ -7,9 +7,12 @@
     "content": "CC­BY­NC­SA 4.0"
   },
   "dependencies": {
+    "@babel/core": "^7.18.5",
+    "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.0.1",
     "jquery": "^3.6.0",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.14.3",
+    "sweetalert": "^2.1.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.2",

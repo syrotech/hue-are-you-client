@@ -1,1 +1,240 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+$black: #333333;
+$white: #ffffff;
+
+// GENERAL
+body {
+  font-family: 'Lato', sans-serif;
+  color: $black;
+  margin: 0;
+  padding: 0;
+
+  // fix background no matter the height, attrib to SO thread: https://stackoverflow.com/questions/2869212/css3-gradient-background-set-on-body-doesnt-stretch-but-instead-repeats
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  // css gradient from https://www.grabient.com/
+  // background-color: #f7ff8b;
+  // background-image: linear-gradient(45deg, #f7ff8b 0%, #2BD2FF 52%, #2BFF88 90%);
+
+  // background-color: #fa7061;
+  // background-image: linear-gradient(90deg, #fa7061 0%, #f7951c 19%, #aac7fa 39%, #f2ddff 60%, #ffffff 80%, #ffffff 100%);
+
+  // background-color: #e80717;
+  // background-image: linear-gradient(62deg, #e80717 0%, #F7CE68 19%, #fffe0f 39%, #09e048 60%, #07bcf5 80%, #9015de 100%);
+
+  background-color: #052cf3;
+  background-image: linear-gradient(43deg, #052cf3 0%, #C850C0 22%, #FFCC70 49%, #09abf5 75%, #a3ea06 100%);
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.after-auth {
+  display: none;
+}
+
+// NAVBAR
+nav {
+  width: 100vw;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin-bottom: 30px;
+  background: $white;
+}
+
+.nav-title {
+  font-size: 32px;
+  margin-center: auto;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: row;
+}
+
+// FORMS
+.form-container {
+  width: 400px;
+  height: 450px;
+  padding-top: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  background: $white;
+}
+
+.form-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 260px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+label {
+  margin: 0px;
+}
+
+.form-title {
+  margin-bottom: 10px;
+}
+
+.form-link {
+  cursor: pointer;
+  color: blue;
+  font-weight: 700;
+}
+
+.btn {
+  margin: 10px 0;
+}
+
+// STATS BAR
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: $white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.stat-bottom-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-title {
+  font-size: 16px;
+  margin: 0;
+}
+
+.stat-count {
+  font-size: 24px;
+  margin-right: 5px;
+  margin-bottom: 0px;
+}
+
+.stat-subtext {
+  font-size: 16px;
+}
+
+// GAME BOARD
+.board {
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 450px;
+  margin: 50px auto;
+  background: $white;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  border: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150px;
+}
+
+.game-container {
+  text-align: center;
+}
+
+// MEDIA QUERIES
+@media (max-width: 600px) {
+  .board {
+    max-width: 300px;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    font-size: 100px;
+  }
+
+  .stats-bar {
+    max-width: 325px;
+  }
+
+  .stat-title {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .stat-count {
+    font-size: 16px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+  }
+
+  .stat-subtext {
+    font-size: 12px;
+  }
+
+  nav {
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .nav-title {
+    width: 375px;
+    font-size: 16px;
+  }
+
+  .form-container {
+    width: 325px;
+  }
+
+  .change-password-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    z-index: 1;
+    max-width: 100px;
+  }
+
+  .pull-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
